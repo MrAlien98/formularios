@@ -103,9 +103,13 @@ namespace formularios
                 int c = 0;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    ButAddField_Click(sender, e);
                     tot += line + ":";
                     c++;
+                }
+                while (c>1)
+                {
+                    ButAddField_Click(sender, e);
+                    c--;
                 }
                 string[] fields = tot.Split(':');
                 ArrayList singles = new ArrayList();
