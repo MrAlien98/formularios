@@ -8,3 +8,13 @@ C:\Users\c\Desktop\C#\formularios\formularios\obj\Debug\formularios.csproj.Gener
 C:\Users\c\Desktop\C#\formularios\formularios\obj\Debug\formularios.csproj.CoreCompileInputs.cache
 C:\Users\c\Desktop\C#\formularios\formularios\obj\Debug\formularios.exe
 C:\Users\c\Desktop\C#\formularios\formularios\obj\Debug\formularios.pdb
+C:\Users\USUARIO\Source\Repos\formularios\bin\Debug\formularios.exe.config
+C:\Users\USUARIO\Source\Repos\formularios\bin\Debug\formularios.exe
+C:\Users\USUARIO\Source\Repos\formularios\bin\Debug\formularios.pdb
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.csprojAssemblyReference.cache
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.Form1.resources
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.Properties.Resources.resources
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.csproj.GenerateResource.cache
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.exe
+C:\Users\USUARIO\Source\Repos\formularios\obj\Debug\formularios.pdb

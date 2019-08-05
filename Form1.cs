@@ -15,6 +15,8 @@ namespace formularios
 
     public partial class Form1 : Form
     {
+        int bnumb=1;
+
         int x1 = 0;
         int x2 = 0;
 
@@ -35,7 +37,7 @@ namespace formularios
         {
             try
             {
-                StreamWriter sw = new StreamWriter("C:/Users/c/Desktop/C#/formularios/formularios/datos/datos.txt", true);
+                StreamWriter sw = new StreamWriter("datos/datos.txt", true);
                 string line = "";
                 int h = 1;
                 foreach (var txtBox in grid.Controls.OfType<TextBox>()){
@@ -65,39 +67,46 @@ namespace formularios
 
         private void ButAddField_Click(object sender, EventArgs e)
         {
-            y1 += 25;
-            y2 += 25;
+            if(bnumb == 14){
+                MessageBox.Show("Yastal tope\nLa universidad icesi solo tiene 14 edificios");
+            }else{
+                bnumb++;
+                y1 += 25;
+                y2 += 25;
 
-            Size _size = new Size(txtBuildingName.Width, txtBuildingName.Height);
-            Size _size2 = new Size(txtNumb.Width, txtNumb.Height);
+                Size _size = new Size(txtBuildingName.Width, txtBuildingName.Height);
+                Size _size2 = new Size(txtNumb.Width, txtNumb.Height);
 
-            var labBuilding = new Label();
-            labBuilding.Text = "Edificio";
-            labBuilding.Location = new Point(label1.Location.X, y1);
+                var labBuilding = new Label();
+                labBuilding.BackColor = Color.Transparent;
+                labBuilding.Text = "Edificio";
+                labBuilding.Location = new Point(label1.Location.X, y1);
 
-            var labNumber = new Label();
-            labNumber.Text = "Numero de grifos";
-            labNumber.Location = new Point(label2.Location.X, y1);
+                var labNumber = new Label();
+                labNumber.BackColor = Color.Transparent;
+                labNumber.Text = "Numero de grifos";
+                labNumber.Location = new Point(label2.Location.X, y1);
 
-            var txtNameB = new TextBox();
-            txtNameB.Size = _size;
-            txtNameB.Location = new Point(x1, y1);
+                var txtNameB = new TextBox();
+                txtNameB.Size = _size;
+                txtNameB.Location = new Point(x1, y1);
 
-            var txtGrifN = new TextBox();
-            txtGrifN.Size = _size2;
-            txtGrifN.Location = new Point(x2, y2);
+                var txtGrifN = new TextBox();
+                txtGrifN.Size = _size2;
+                txtGrifN.Location = new Point(x2, y2);
 
-            grid.Controls.Add(txtGrifN);
-            grid.Controls.Add(txtNameB);
-            grid.Controls.Add(labNumber);
-            grid.Controls.Add(labBuilding);
+                grid.Controls.Add(txtGrifN);
+                grid.Controls.Add(txtNameB);
+                grid.Controls.Add(labNumber);
+                grid.Controls.Add(labBuilding);
+            }
         }
 
         private void ButLoad_Click(object sender, EventArgs e)
         {
             try
             {
-                StreamReader sr = new StreamReader("C:/Users/c/Desktop/C#/formularios/formularios/datos/datos.txt");
+                StreamReader sr = new StreamReader("datos/datos.txt");
                 string line = null;
                 string tot = null;
                 int c = 0;
@@ -125,6 +134,7 @@ namespace formularios
                     Console.WriteLine(a);
                 }
                 int h = 0;
+                
                 foreach (var txtBox in grid.Controls.OfType<TextBox>())
                 {
                     if (h < singles.Count)
@@ -144,5 +154,14 @@ namespace formularios
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SplitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }
